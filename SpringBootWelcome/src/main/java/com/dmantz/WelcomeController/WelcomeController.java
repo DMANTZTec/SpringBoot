@@ -25,7 +25,7 @@ public class WelcomeController {
 			@GetMapping(path="/welcome/{name}")
 			public String welcome(@PathVariable String name) {
 				
-				return name+", "+ service.getWelcomeMessage();
+				return name+" , "+ service.getWelcomeMessage();
 				
 		}
 	
