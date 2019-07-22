@@ -1,8 +1,5 @@
 package com.dmantz.SpringBootJdbcTemplate.DAOImpl;
 
-
-
-import java.io.File;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
@@ -55,7 +52,7 @@ public class EmployeeDaoImpl implements EmployeeDao {
 		String UPDATE_EMPLOYEE_SQL="UPDATE  employee_table  set employeeId=?  WHERE email=?";
 	     int update=jdbcTemplate.update(UPDATE_EMPLOYEE_SQL,employeeId,newEmail);
 	      
-	      if(update == 0) {
+	      if(update == 1) {
 	    	  
 	    	  //logger.info("Employee is Updated");
 	    	  System.out.println("Employee is Updated");

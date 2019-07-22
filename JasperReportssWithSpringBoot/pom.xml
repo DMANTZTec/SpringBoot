@@ -5,33 +5,33 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.1.3.RELEASE</version>
+		<version>1.5.21.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	
-	<groupId>com.dmantz.BookStoreApp</groupId>
-	<artifactId>BookStoreApp</artifactId>
+	<groupId>com.dmantz.JasperReportsWithSpringBoot</groupId>
+	<artifactId>JasperReportssWithSpringBoot</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>BookStoreApp</name>
-	<description>Demo project for BookStoreApp</description>
+	<name>JasperReportssWithSpringBoot</name>
+	<description>Demo project for JasperReportsWithSpringBoot</description>
 
 	<properties>
 		<java.version>1.8</java.version>
-		<springfox.version>2.9.2</springfox.version>
 	</properties>
-	
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-jdbc</artifactId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-	
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-	
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
@@ -47,29 +47,16 @@
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
 		</dependency>
-		
-		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
-      <dependency>
-    <groupId>io.springfox</groupId>
-    <artifactId>springfox-swagger2</artifactId>
-    <version>2.9.2</version>
-      </dependency>
-
-    <!-- https://mvnrepository.com/artifact/com.google.guava/guava -->
-    <dependency>
-    <groupId>com.google.guava</groupId>
-    <artifactId>guava</artifactId>
-    <version>27.0.1-jre</version>
-   </dependency>
-
-	<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger-ui -->
-  <dependency>
-    <groupId>io.springfox</groupId>
-    <artifactId>springfox-swagger-ui</artifactId>
-    <version>2.9.2</version>
-  </dependency>
-			
-  </dependencies>
+		<dependency>
+			<groupId>net.sf.jasperreports</groupId>
+			<artifactId>jasperreports</artifactId>
+		    <version>6.4.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context-support</artifactId>
+		</dependency>
+	</dependencies>
 
 	<build>
 		<plugins>
@@ -79,5 +66,5 @@
 			</plugin>
 		</plugins>
 	</build>
-	
+
 </project>

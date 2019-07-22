@@ -19,7 +19,7 @@ public class BookController {
 	@RequestMapping(value="/getBookId")
 	public void getBookById(){
 		
-           Book book=bookDao.getBookById(3);
+           Book book=bookDao.getBookById(5);
            
 		System.out.println(book.toString());
 		
@@ -28,7 +28,7 @@ public class BookController {
 	@RequestMapping(value="/getBookName")
 	public void getBookByName() {
 		
-		Book book=bookDao.getBookByName("CSS");
+		Book book=bookDao.getBookByName("JAVASCRIPT");
         
 		System.out.println(book.toString());
 		

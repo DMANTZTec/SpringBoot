@@ -23,6 +23,21 @@ public class Employee {
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)	
 	private Long id;
+	@NotBlank
+	private String name;
+	
+	@NotBlank
+	private String designation;
+	
+	@NotBlank
+	private String excertise;
+	
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	@LastModifiedDate
+	private Date createdAt;
+	
+	
 	
 	public Long getId() {
 		return id;
@@ -64,20 +79,6 @@ public class Employee {
 		this.createdAt = createdAt;
 	}
 
-	@NotBlank
-	private String name;
-	
-	@NotBlank
-	private String designation;
-	
-	@NotBlank
-	private String excertise;
-	
-	@NotBlank
-	@Temporal(TemporalType.TIMESTAMP)
-	@LastModifiedDate
-	private Date createdAt;
-	
 	
 
 }
