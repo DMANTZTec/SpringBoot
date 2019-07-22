@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html xmlns:th="http:www.thymeleaf.org"  lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+ <script  src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script  src="https://code.highcharts.com/highcharts.js"></script> 
+<script  src="https://code.highcharts.com/modules/data.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<title>HighCharts</title>
+</head>
+<body>
+
+<div id="container"></div>
+
+<!-- <a th:href="@{/templates/index.js}">Bar-Graph</a><br/> -->
+ 
+<!--  <script src="index.js"></script> -->
+ 
+ <script th:inline="javascript">
+ 
+ $(function (){
+	 	 /* const options={			
+	 	  chart:{
+	 		  type:'column',
+	 		  zoomType:'xy'			  				
+	 		},		
+	 		title:{			
+	 			text:'TechWorkLog'
+	 		},
+	 		yAxis:{			
+	 			title:{				
+	 				text:'Work Template'			
+	 			}
+	 		}			
+	 	};	
+	 	options.data={	
+	 			//csvURL:'/E:/data.csv',
+	 			csvURL:'https://docs.google.com/spreadsheets/d/1NH-DG9epyZFGY6SrSYMhIIAzebbz_CPM9uCR2S47JBQ/edit#gid=1549063895',
+	 			enablePolling:true,
+	 			dataRefreshRate:2
+	 	};	
+	 	Highcharts.chart('container',options);
+	 	 */
+	 	
+	 	<!-- Another Example -->
+	 		 	
+	 	  
+	    /*  Highcharts.chart('container', {
+		    chart: {
+		        type: 'column'
+		    },
+		    title: {
+		        text: 'TechWorkLog'
+		    },		    
+		    data: {
+		    	// googleSpreadsheetKey: 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRCzxdm7Ab_TSQJ7YmvDNw7vNkaKG_TkFioDSc8nomsbmhhlkjVZnDhN5OHS2l3TSFKohnjx1Sufj_n/pubhtml',
+		       //	csvURL:'https://demo-live-data.highcharts.com/time-data.csv', 
+		    	csvURL: 'https://docs.google.com/spreadsheets/d/1NH-DG9epyZFGY6SrSYMhIIAzebbz_CPM9uCR2S47JBQ/edit#gid=1549063895', 
+		         enablePolling: true		       
+		    },		    
+		    yAxis: {
+		        title: {
+		            text: 'Units'
+		        }
+		    }
+		});       
+		 */
+	 	<!-- Another Example -->
+		
+	 	   $('#container').highcharts({
+			
+	        chart:{
+	        	
+	        	type:'column'
+	        },
+	        title: {
+	            text: 'Highcharts data from Google Spreadsheets'
+	        },
+
+	        data: {
+	                googleSpreadsheetKey: '0AoIaUO7wH1HwdENPcGVEVkxfUDJkMmFBcXMzOVVPdHc'
+	             // googleSpreadsheetKey: '1NH-DG9epyZFGY6SrSYMhIIAzebbz_CPM9uCR2S47JBQ'
+	        }
+
+	    });  
+	 	 
+	 	<!-- Another Example -->
+	 	/* 
+	 	Highcharts.getGoogleSpreadsheet({
+	 	    key: '0AoIaUO7wH1HwdENPcGVEVkxfUDJkMmFBcXMzOVVPdHc',
+	 	    complete: function(options) {
+	 	        
+	 	        options = Highcharts.merge(options, {
+	 	            chart: {
+	 	                renderTo: 'container'
+	 	            }
+	 	        });
+	 	        
+	 	        var chart = new Highcharts.Chart(options);
+	 	    }
+	 	});
+ */
+	   
+ });
+ </script> 
+</body>
+</html>
