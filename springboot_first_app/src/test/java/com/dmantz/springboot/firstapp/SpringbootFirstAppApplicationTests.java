@@ -1,10 +1,10 @@
-package com.dmantz.springboot;
+package com.dmantz.springboot.firstapp;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class SpringbootApplicationTests {
+class SpringbootFirstAppApplicationTests {
 
 	@Test
 	void contextLoads() {
