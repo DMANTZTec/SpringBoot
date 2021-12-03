@@ -1,13 +1,13 @@
-package com.dmantz.springboot.backend;
+package com.dmantz.springboot.jdbc;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringbootBackendApplication {
+public class SimpleJdbcAppApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SpringbootBackendApplication.class, args);
+		SpringApplication.run(SimpleJdbcAppApplication.class, args);
 	}
 
 }
