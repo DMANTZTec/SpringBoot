@@ -5,44 +5,21 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-/*@Data
+@Data
 @AllArgsConstructor
-@NoArgsConstructor*/
+@NoArgsConstructor
 public class Topic {
-	private int topicId;
+	private int topic_id;
 	
-	private String topicName;
+	private String topic_name;
 	 	
-	private String topicDescription;
-	public Topic(String topicName, String TopicDescription) {
-		this.setTopicName(topicName);
-		this.setTopicDescription(TopicDescription);
-	}
+	private String topic_description;
 	
+	private int topic_index;
+	
+	private int module_id;
 
-	public int getTopicId() {
-		return topicId;
-	}
-
-	public void setTopicId(int topicId) {
-		this.topicId = topicId;
-	}
-
-	public String getTopicName() {
-		return topicName;
-	}
-
-	public void setTopicName(String topicName) {
-		this.topicName = topicName;
-	}
-
-	public String getTopicDescription() {
-		return topicDescription;
-	}
-
-	public void setTopicDescription(String topicDescription) {
-		this.topicDescription = topicDescription;
-	}
+	
 	
 }
 

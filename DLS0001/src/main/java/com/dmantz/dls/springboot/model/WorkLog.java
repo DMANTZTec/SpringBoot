@@ -1,5 +1,7 @@
 package com.dmantz.dls.springboot.model;
 
+import java.util.Date;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
@@ -10,13 +12,12 @@ import lombok.Setter;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Trainee {
-	
-	private int trainee_id;
-	private String trainee_name;
-	private String trainee_email;
-	private int course_id;
-
-	
+public class WorkLog {
+	public Trainee traineeId;
+	public Course courseId;
+	public Module moduleId;
+	public Topic topicId;
+	public Date endDate;
+	public String status;
 
 }
