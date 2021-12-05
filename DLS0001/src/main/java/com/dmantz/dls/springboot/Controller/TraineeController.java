@@ -7,6 +7,7 @@ import com.dmantz.dls.springboot.model.Trainee_Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -28,24 +29,24 @@ public class TraineeController {
 		}
 		
 		@GetMapping("trainee/mycourses/{trainee_id}")
-		public List<Trainee_Course> viewMyCourses (@PathVariable String trainee_id) {
-			return tDAO.viewMyCourses(trainee_id);
+		public List<Trainee_Course> viewMyCourses (@PathVariable int traineeId) {
+			return tDAO.viewMyCourses( traineeId);
 		}
 		
 		@GetMapping("trainee/modules/{course_id}")
 		public List<Module> viewMyModules (
-				@PathVariable String course_id) {
-			return tDAO.viewMyModules(course_id);
+				@PathVariable int courseId) {
+			return tDAO.viewMyModules( courseId);
 
         }
 		@GetMapping("trainee/tasks/{module_id}")
-		public List<Module> viewMyTasks(@PathVariable String module_id ) {
-			return tDAO.viewMyTasks( module_id);
+		public List<Module> viewMyTasks(@PathVariable int moduleId ) {
+			return tDAO.viewMyTasks( moduleId);
 		}
 		//Inserting Data
-		@PutMapping("/employees/{id}")
-		public String update(@RequestBody Course c, @PathVariable int id) {
-			return tDAO.update(c, id)+" Employee(s) updated successfully";
+		@PostMapping("/trainee/worklog")
+				public int save(@RequestBody Course c){
+			return tDAO.save(c);
 		}
 		
 }

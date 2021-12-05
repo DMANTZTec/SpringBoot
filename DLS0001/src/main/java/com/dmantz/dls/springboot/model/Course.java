@@ -11,14 +11,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class Course {
 	
-	public int course_id;
-	private String course_name;
-	private String created_by;
-	private Date created_dt;
-	private String recommended_duration;
-	private String course_provider;
+	public int courseId;
+	private String courseName;
+	private String createdBy;
+	private Date createdDt;
+	private String recommendedDuration;
+	private String courseProvider;
 	private ArrayList<Module> modules;
-	
-
-	
+		
 }

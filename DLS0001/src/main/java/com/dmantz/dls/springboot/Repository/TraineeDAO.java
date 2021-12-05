@@ -12,14 +12,14 @@ public interface TraineeDAO {
 
 	public Course findByCourseId(int id);
 	
-	public List<Trainee_Course> viewMyCourses(String trainee_id);
+	public List<Trainee_Course> viewMyCourses(int trainee_id);
 	
-	public List<Module> viewMyModules(String course_id);
+	public List<Module> viewMyModules(int course_id);
 		
-	public List<Module> viewMyTasks(String module_id);
+	public List<Module> viewMyTasks(int module_id);
 	
 	//inserting
-	public int update(Course c,int id);
+	public int save(Course c);
 	
 	
 }
