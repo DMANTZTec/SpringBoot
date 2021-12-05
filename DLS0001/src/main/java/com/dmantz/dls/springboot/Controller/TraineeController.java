@@ -7,6 +7,8 @@ import com.dmantz.dls.springboot.model.Trainee_Course;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import com.dmantz.dls.springboot.Repository.TraineeDAO;
 import com.dmantz.dls.springboot.model.Course;
@@ -40,6 +42,11 @@ public class TraineeController {
 		public List<Module> viewMyTasks(@PathVariable String module_id ) {
 			return tDAO.viewMyTasks( module_id);
 		}
+		@PutMapping("/employees/{id}")
+		public String update(@RequestBody Course c, @PathVariable int id) {
+			return tDAO.update(c, id)+" Employee(s) updated successfully";
+		}
+		
 }
 
 
