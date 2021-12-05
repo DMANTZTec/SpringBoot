@@ -42,6 +42,7 @@ public class TraineeController {
 		public List<Module> viewMyTasks(@PathVariable String module_id ) {
 			return tDAO.viewMyTasks( module_id);
 		}
+		//Inserting Data
 		@PutMapping("/employees/{id}")
 		public String update(@RequestBody Course c, @PathVariable int id) {
 			return tDAO.update(c, id)+" Employee(s) updated successfully";
