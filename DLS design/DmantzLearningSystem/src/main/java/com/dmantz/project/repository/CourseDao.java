@@ -1,14 +1,20 @@
 package com.dmantz.project.repository;
 
+import java.util.List;
+
 import com.dmantz.project.model.Course;
 
 public interface CourseDao {
 	
 	
-	int addCourse(Course course);
-	int updateCourse(Course course);
-	int deleteCourse(int courseId);
-	int viewCourse(int courseId);
+	
+	//void viewCourse(String courseId);
+	
+	
+	public abstract int addCourse(Course course);
+	public abstract Course fetchCourseById(String courseId);
+	public abstract List<Course> fetchAllCourses();
+	public abstract void deleteCourseById(String courseId);
 	
 
 }

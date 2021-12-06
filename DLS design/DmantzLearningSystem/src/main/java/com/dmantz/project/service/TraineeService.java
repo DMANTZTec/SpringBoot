@@ -15,13 +15,13 @@ public class TraineeService {
 	private static List<Trainee> trainees= new ArrayList<>();
 	
 	static {
-		Course course1 = new Course("1","Java","40 hours",Arrays.asList("Control statements","Class","interface","Constructors"));
+		Course course1 = new Course("1","Java","afl","40 hours",Arrays.asList("Control statements","Class","interface","Constructors"));
 		
-		Course course2 = new Course("2","Spring","30 hours",Arrays.asList("Control statements","Class","interface","Constructors"));
+		Course course2 = new Course("2","Spring","afl","30 hours",Arrays.asList("Control statements","Class","interface","Constructors"));
 		
-		Course course3 = new Course("3","Angular","50 hours",Arrays.asList("Control statements","Class","interface","Constructors"));
+		Course course3 = new Course("3","Angular","afl","50 hours",Arrays.asList("Control statements","Class","interface","Constructors"));
 		
-		Course course4 = new Course("4","HTML","20 hours",Arrays.asList("Control statements","Class","interface","Constructors"));
+		Course course4 = new Course("4","HTML","afl","20 hours",Arrays.asList("Control statements","Class","interface","Constructors"));
 		
 		Trainee swapna = new Trainee("1","swapna koyagura","Nalgonda",new ArrayList<>(Arrays.asList(course1,course2,course3,course4)));
 		

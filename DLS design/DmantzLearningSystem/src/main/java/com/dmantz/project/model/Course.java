@@ -5,13 +5,15 @@ import java.util.List;
 public class Course {
 	private String courseId;
 	private String courseName;
+	private String createdBy;
 	private String recommendedDuration;
 	private List<String> modules;
 	
-	public Course(String courseId, String courseName, String recommendedDuration, List<String> modules) {
+	public Course(String courseId, String courseName, String createdBy,String recommendedDuration, List<String> modules) {
 		super();
 		this.courseId = courseId;
 		this.courseName = courseName;
+		this.createdBy=createdBy;
 		this.recommendedDuration = recommendedDuration;
 		this.modules = modules;
 	}
@@ -48,10 +50,18 @@ public class Course {
 		this.modules = modules;
 	}
 
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
 	@Override
 	public String toString() {
-		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", recommendedDuration="
-				+ recommendedDuration + ", modules=" + modules + "]";
+		return "Course [courseId=" + courseId + ", courseName=" + courseName + ", createdBy=" + createdBy
+				+ ", recommendedDuration=" + recommendedDuration + ", modules=" + modules + "]";
 	}
 	
 	
