@@ -18,5 +18,10 @@ public class Course {
 	private String recommendedDuration;
 	private String courseProvider;
 	private ArrayList<Module> modules;
+	
+	/*public Course(String courseName,String createdBy,Date createdDt,String recommendedDuration,String courseProvider) {
+		this.courseName=courseName;
+		this.courseProvider=courseProvider;
+	}*/
 		
 }

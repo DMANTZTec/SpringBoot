@@ -9,5 +9,4 @@ public class DlsApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(DlsApplication.class, args);
 	}
-
 }

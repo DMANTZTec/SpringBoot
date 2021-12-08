@@ -19,7 +19,7 @@ public interface TraineeDAO {
 	public List<Module> viewMyTasks(int module_id);
 	
 	//inserting
-	public int save(Course c);
+	public int save( Course c);
 	
 	
 }

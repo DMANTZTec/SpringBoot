@@ -44,11 +44,12 @@ public class TraineeDAOImpl implements TraineeDAO {
 	public List<Module> viewMyTasks(int moduleId) {
 		return jdbcTemplate.query("select*from topic Where module_id=?", new BeanPropertyRowMapper<Module>(Module.class),moduleId);
 	}
+	
 	//inserting
 		@Override
-		public int save(Course c) {
-			return jdbcTemplate.save("INSERT INTO course (course_id, course_name,created_by,created_dt,course_provider,recommended_duration) VALUES (?,?,?,?,?,?)", 
-					new Object[] {c.getCourseId(), c.getCourseName(), c.getCreatedBy(),c.getCreatedDt(),c.getCourseId(),c.getRecommendedDuration()});
+		public int save( Course c) {
+			return jdbcTemplate.update("INSERT INTO course ( course_name,created_by,created_dt,course_provider,recommended_duration) VALUES (?,?,?,?,?,?)", 
+					new Object[] { c.getCourseName(), c.getCreatedBy(),c.getCreatedDt(),c.getCourseProvider(),c.getRecommendedDuration()});
 		}
 }
 
