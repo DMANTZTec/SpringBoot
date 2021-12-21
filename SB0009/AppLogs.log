@@ -1,0 +1,15 @@
+21-December-2021 04:03:38 IST [main] -5p com.log4j.ReportGenerator main - This is a debug message 
+21-December-2021 04:03:38 IST [main] -5p com.log4j.ReportGenerator main - This is a info message 
+21-December-2021 04:03:38 IST [main] -5p com.log4j.ReportGenerator main - This is a warn message 
+21-December-2021 04:03:38 IST [main] -5p com.log4j.ReportGenerator main - This is a error message 
+21-December-2021 04:03:38 IST [main] -5p com.log4j.ReportGenerator main - This is a fatal message 
+21-December-2021 04:52:03 IST [main] -5p com.log4j.ReportGenerator main - This is a debug message 
+21-December-2021 04:52:03 IST [main] -5p com.log4j.ReportGenerator main - This is a info message 
+21-December-2021 04:52:03 IST [main] -5p com.log4j.ReportGenerator main - This is a warn message 
+21-December-2021 04:52:03 IST [main] -5p com.log4j.ReportGenerator main - This is a error message 
+21-December-2021 04:52:03 IST [main] -5p com.log4j.ReportGenerator main - This is a fatal message 
+21-December-2021 04:53:31 IST [main] -5p com.log4j.ReportGenerator main - This is a debug message 
+21-December-2021 04:53:31 IST [main] -5p com.log4j.ReportGenerator main - This is a info message 
+21-December-2021 04:53:31 IST [main] -5p com.log4j.ReportGenerator main - This is a warn message 
+21-December-2021 04:53:31 IST [main] -5p com.log4j.ReportGenerator main - This is a error message 
+21-December-2021 04:53:31 IST [main] -5p com.log4j.ReportGenerator main - This is a fatal message 
