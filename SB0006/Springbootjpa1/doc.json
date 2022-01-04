@@ -1,0 +1,300 @@
+{
+	"swagger": "2.0",
+	"info": {
+		"description": "Api Documentation",
+		"version": "1.0",
+		"title": "Api Documentation",
+		"termsOfService": "urn:tos",
+		"contact": {},
+		"license": {
+			"name": "Apache 2.0",
+			"url": "http://www.apache.org/licenses/LICENSE-2.0"
+		}
+	},
+	"host": "localhost:8091",
+	"basePath": "/",
+	"tags": [
+		{
+			"name": "department-controller",
+			"description": "Department Controller"
+		}
+	],
+	"paths": {
+		"/departments": {
+			"get": {
+				"tags": [
+					"department-controller"
+				],
+				"summary": "fetchDepartmentList",
+				"operationId": "fetchDepartmentListUsingGET",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"*/*"
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "array",
+							"items": {
+								"$ref": "#/definitions/Department"
+							}
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"post": {
+				"tags": [
+					"department-controller"
+				],
+				"summary": "saveDepartment",
+				"operationId": "saveDepartmentUsingPOST",
+				"consumes": [
+					"application/xml",
+					"application/json"
+				],
+				"produces": [
+					"application/xml",
+					"application/json"
+				],
+				"parameters": [
+					{
+						"in": "body",
+						"name": "department",
+						"description": "department",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Department"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Department"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/departments/name/{name}": {
+			"get": {
+				"tags": [
+					"department-controller"
+				],
+				"summary": "fetchDepartmentByName",
+				"operationId": "fetchDepartmentByNameUsingGET",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"*/*"
+				],
+				"parameters": [
+					{
+						"name": "name",
+						"in": "path",
+						"description": "name",
+						"required": true,
+						"type": "string"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Department"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			}
+		},
+		"/departments/{id}": {
+			"get": {
+				"tags": [
+					"department-controller"
+				],
+				"summary": "fetchDepartmentById",
+				"operationId": "fetchDepartmentByIdUsingGET",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"*/*"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Department"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"put": {
+				"tags": [
+					"department-controller"
+				],
+				"summary": "updateDepartment",
+				"operationId": "updateDepartmentUsingPUT",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"*/*"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					},
+					{
+						"in": "body",
+						"name": "department",
+						"description": "department",
+						"required": true,
+						"schema": {
+							"$ref": "#/definitions/Department"
+						}
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"$ref": "#/definitions/Department"
+						}
+					},
+					"201": {
+						"description": "Created"
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"403": {
+						"description": "Forbidden"
+					},
+					"404": {
+						"description": "Not Found"
+					}
+				}
+			},
+			"delete": {
+				"tags": [
+					"department-controller"
+				],
+				"summary": "deleteDepartmentById",
+				"operationId": "deleteDepartmentByIdUsingDELETE",
+				"consumes": [
+					"application/json"
+				],
+				"produces": [
+					"*/*"
+				],
+				"parameters": [
+					{
+						"name": "id",
+						"in": "path",
+						"description": "id",
+						"required": true,
+						"type": "integer",
+						"format": "int64"
+					}
+				],
+				"responses": {
+					"200": {
+						"description": "OK",
+						"schema": {
+							"type": "string"
+						}
+					},
+					"401": {
+						"description": "Unauthorized"
+					},
+					"204": {
+						"description": "No Content"
+					},
+					"403": {
+						"description": "Forbidden"
+					}
+				}
+			}
+		}
+	},
+	"definitions": {
+		"Department": {
+			"type": "object",
+			"properties": {
+				"deparmentId": {
+					"type": "integer",
+					"format": "int64"
+				},
+				"departmentAddress": {
+					"type": "string"
+				},
+				"departmentCode": {
+					"type": "string"
+				},
+				"departmentNmae": {
+					"type": "string"
+				}
+			}
+		}
+	}
+}
