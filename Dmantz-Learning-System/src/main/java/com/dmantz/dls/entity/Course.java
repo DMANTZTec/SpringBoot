@@ -1,6 +1,7 @@
 package com.dmantz.dls.entity;
 
 
+import java.util.Date;
 import java.util.List;
 //import java.util.Set;
 
@@ -46,7 +47,7 @@ public class Course {
 	@Column(name = "created_dt")
 	@Getter
 	@Setter
-	private String createdDt;
+	private Date createdDt;
 	
 	@Column(name = "recommended_duration")
 	@Getter
@@ -58,9 +59,9 @@ public class Course {
 	@Setter
 	private String courseProvider;
 	
-	@OneToMany(mappedBy = "course")
 	@Getter 
 	@Setter
+	@OneToMany(mappedBy = "course")
 	private List<Module> modules;
 	
 	

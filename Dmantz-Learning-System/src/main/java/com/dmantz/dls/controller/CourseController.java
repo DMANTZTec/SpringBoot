@@ -19,13 +19,12 @@ public class CourseController {
 	@Autowired
 	CourseService courseService;
 
-//	@GetMapping("/list")
-//	public List<Course> getAllCourses() {
-//
-//		List<Course> courses = courseService.findAll();
-//		return courses;
-//	}
-//		
+	@GetMapping("/list")
+	public List<Course> getAllCourses() {
+		List<Course> courses = courseService.findAll();
+		return courses;
+	}
+		
     @GetMapping("/details/{courseId}")
     public Course findByCourseId(@PathVariable int courseId){
     	Course courseDetails=courseService.findByCourseId(courseId);

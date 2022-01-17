@@ -48,7 +48,7 @@ public class Module {
 	@Column(name = "module_position")
 	@Getter
 	@Setter
-	private String modulePosition;
+	private int modulePosition;
 	
 	@ManyToOne(targetEntity = Course.class, fetch = FetchType.EAGER)
 	@JoinColumn(name = "course_id", insertable = false, updatable = false)

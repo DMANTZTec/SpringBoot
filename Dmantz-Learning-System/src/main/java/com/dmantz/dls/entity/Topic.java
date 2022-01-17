@@ -38,13 +38,13 @@ public class Topic {
 	@Column(name = "topic_description")
 	@Getter
 	@Setter
-	private int topicDescription;
+	private String topicDescription;
 	
 	
 	@Column(name = "topic_index")
 	@Getter
 	@Setter
-	private String topicIndex;
+	private int topicIndex;
 	
 	@Column(name = "module_id")
 	@Getter
