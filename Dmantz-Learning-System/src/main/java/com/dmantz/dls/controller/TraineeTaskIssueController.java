@@ -10,7 +10,7 @@ import com.dmantz.dls.entity.TraineeTaskIssue;
 import com.dmantz.dls.service.TraineeTaskIssueService;
 
 @RestController
-@RequestMapping("/issue")
+@RequestMapping("/task/issue")
 public class TraineeTaskIssueController {
 	
 	@Autowired 
@@ -19,7 +19,6 @@ public class TraineeTaskIssueController {
 	@PostMapping("/save")
 	public TraineeTaskIssue saveTraineeTaskIssue(@RequestBody TraineeTaskIssue traineeTaskIssue) {
 		traineeTaskIssueService.saveTraineeTaskIssue(traineeTaskIssue);
-
 		return traineeTaskIssue;
 
 	}

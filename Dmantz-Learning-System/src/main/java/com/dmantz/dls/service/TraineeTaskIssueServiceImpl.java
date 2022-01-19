@@ -16,7 +16,7 @@ public class TraineeTaskIssueServiceImpl implements TraineeTaskIssueService {
 	@Override
 	public TraineeTaskIssue saveTraineeTaskIssue(TraineeTaskIssue traineeTaskIssue) {
         taskIssueRepo.save(traineeTaskIssue);
-		return null;
+		return traineeTaskIssue;
 	}
 	
 	

@@ -5,6 +5,8 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
@@ -22,6 +24,12 @@ import lombok.ToString;
 @Table(name = "worklog")
 public class Worklog {
 	@Id
+	@Column(name = "worklog_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Getter
+	@Setter
+	private int worklogId;
+	
 	@Column(name = "task_id")
 	@Getter
 	@Setter
@@ -31,6 +39,7 @@ public class Worklog {
 	@Getter
 	@Setter
 	private int traineeId;
+	
 	
 	@Column(name = "topic_name")
 	@Getter

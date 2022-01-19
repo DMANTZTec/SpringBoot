@@ -15,20 +15,19 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-
 @ToString
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "trainee_task_issue")
-public class TraineeTaskIssue {
+@Table(name = "trainee_task_log")
+public class TaskAddHours {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "task_issue_id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "task_log_id")
 	@Getter
 	@Setter
-	private int taskIssueId;
+	private int taskLogId;
 	
 	
 	@Column(name = "task_id")
@@ -36,21 +35,13 @@ public class TraineeTaskIssue {
 	@Setter
 	private String taskId;
 	
-	
-	@Column(name = "issue_add_dt")
+	@Column(name = "log_date")
 	@Getter
 	@Setter
-	private Date issueAddDt;
+	private Date logDate;
 	
-	@Column(name = "issue_text")
+	@Column(name = "no_of_hours")
 	@Getter
 	@Setter
-	private String issueText;
-	
-	
-	@Column(name = "issue_status")
-	@Getter
-	@Setter
-	private String issueStatus;
-
+	private String noOfHours;
 }
