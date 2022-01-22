@@ -41,10 +41,10 @@ public class Topic {
 	private String topicDescription;
 	
 	
-	@Column(name = "topic_index")
+	@Column(name = "topic_position")
 	@Getter
 	@Setter
-	private int topicIndex;
+	private int topicPosition;
 	
 	@Column(name = "module_id")
 	@Getter

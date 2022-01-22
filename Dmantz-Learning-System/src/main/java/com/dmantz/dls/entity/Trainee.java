@@ -37,9 +37,6 @@ public class Trainee {
 	@Setter
 	private int traineeEmail;
 	
-	@Column(name = "course_id")
-	@Getter
-	@Setter
-	private int courseId;
+	
 	
 }

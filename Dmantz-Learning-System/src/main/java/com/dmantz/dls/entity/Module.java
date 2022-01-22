@@ -50,6 +50,11 @@ public class Module {
 	@Setter
 	private int modulePosition;
 	
+	@Column(name = "module_description")
+	@Getter
+	@Setter
+	private String moduleDescription;
+	
 	@ManyToOne(targetEntity = Course.class, fetch = FetchType.EAGER)
 	@JoinColumn(name = "course_id", insertable = false, updatable = false)
 	private Course course;

@@ -4,9 +4,12 @@ import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -25,16 +28,16 @@ public class TraineeTaskIssue {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	@Column(name = "task_issue_id")
+	@Column(name = "issue_id")
 	@Getter
 	@Setter
-	private int taskIssueId;
+	private int issueId;
 	
 	
-	@Column(name = "task_id")
+	@Column(name = "trainee_task_id")
 	@Getter
 	@Setter
-	private String taskId;
+	private String traineeTaskId;
 	
 	
 	@Column(name = "issue_add_dt")
@@ -52,5 +55,11 @@ public class TraineeTaskIssue {
 	@Getter
 	@Setter
 	private String issueStatus;
+	
+//	@ManyToOne(targetEntity = TraineeTask.class, fetch = FetchType.EAGER)
+//	@JoinColumn(name = "trainee_task_id", insertable = false, updatable = false)
+//	private TraineeTask traineeTask;
+//	
+	
 
 }
