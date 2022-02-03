@@ -57,9 +57,9 @@ public class TaskAddHours {
 	private String entryDatetime;
 	
 //	
-//	@ManyToOne(targetEntity = TraineeTask.class, fetch = FetchType.EAGER)
-//	@JoinColumn(name = "trainee_task_id", insertable = false, updatable = false)
-//	private TraineeTask traineeTask;
+	@ManyToOne(targetEntity = TraineeTask.class, fetch = FetchType.EAGER)
+	@JoinColumn(name = "trainee_task_id", insertable = false, updatable = false)
+	private TraineeTask traineeTask;
 	
 	
 	

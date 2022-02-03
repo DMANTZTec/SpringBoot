@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.dmantz.dls.entity.TraineeTask;
-import com.dmantz.dls.repository.TraineeRepository;
+import com.dmantz.dls.repository.TraineeTaskRepository;
 
 
 @Service
@@ -14,21 +14,30 @@ public class TraineeServiceImpl implements TraineeService {
 
 	
 	@Autowired 
-	TraineeRepository traineeRepo;
+	TraineeTaskRepository traineetaskRepo;
 	
 	
 	@Override
 	public TraineeTask saveTraineeTask(TraineeTask traineeTask) {
-		traineeRepo.save(traineeTask);
+		traineetaskRepo.save(traineeTask);
 		return traineeTask;
 	}
 	
 	@Override
 	public List<TraineeTask> findByTraineeId(int traineeId) {
-		List<TraineeTask> ongoingTask = traineeRepo.findBytraineeId(traineeId);
+		List<TraineeTask> ongoingTask = traineetaskRepo.findBytraineeId(traineeId);
 	 System.out.println("OngoingTask Details: ");
 		return ongoingTask;
 	}
+
+	
+	
+//	@Override
+//	public TraineeTask findByTraineeId1(int traineeId) {
+//		TraineeTask ongoingTask = traineeRepo.findBytraineeId1(traineeId);
+//	 System.out.println("OngoingTask Details: ");
+//		return ongoingTask;
+//	}
 
 	
 

@@ -1,5 +1,8 @@
 package com.dmantz.dls.entity;
 
+import java.util.List;
+
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -8,6 +11,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
@@ -54,5 +58,15 @@ public class Topic {
 	@ManyToOne(targetEntity = Module.class, fetch = FetchType.EAGER)
 	@JoinColumn(name = "module_id", insertable = false, updatable = false)
 	private Module module;
+	
+	@Getter 
+	@Setter
+	@OneToMany(mappedBy = "topics")
+	private List<TraineeTask> traineeTasks;
+	
+	
+//	@OneToMany(cascade=CascadeType.ALL)
+//	@JoinColumn(name="topic_id",referencedColumnName="topic_id1")
+//	private List<TraineeTask> traineeTasks;
 	
 }

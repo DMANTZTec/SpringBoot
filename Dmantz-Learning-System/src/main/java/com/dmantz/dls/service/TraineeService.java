@@ -10,6 +10,11 @@ public interface TraineeService {
 	public TraineeTask saveTraineeTask(TraineeTask traineeTask);
 	
 	public List<TraineeTask> findByTraineeId(int traineeId);
+	
+	//public TraineeTask findByTraineeId1(int traineeId);
+
+	
+	
 
 
 	

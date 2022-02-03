@@ -6,10 +6,12 @@ import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -55,10 +57,10 @@ public class TraineeTask {
 	private Date endDate;
 	
 	
-//	@Getter 
-//	@Setter
-//	@OneToMany(mappedBy = "trainee_task")
-//	private List<TaskAddHours> taskAddHours;
+	@Getter 
+	@Setter
+	@OneToMany(mappedBy = "traineeTask")
+	private List<TaskAddHours> taskAddHours;
 //	
 //	@Getter 
 //	@Setter
@@ -66,17 +68,23 @@ public class TraineeTask {
 //	private List<TraineeTaskIssue> traineeTaskIssues;
 	
 	
-	@Getter 
-	@Setter
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="trainee_task_id",referencedColumnName="trainee_task_id")
-	private List<TaskAddHours> taskAddHours;
+	@ManyToOne(targetEntity = Topic.class, fetch = FetchType.EAGER)
+	@JoinColumn(name = "topic_id", insertable = false, updatable = false)
+	private Topic topics;
 	
-	@Getter 
-	@Setter
-	@OneToMany(cascade=CascadeType.ALL)
-	@JoinColumn(name="trainee_task_id",referencedColumnName="trainee_task_id")
-	private List<TraineeTaskIssue> traineeTaskIssues;
+//	@Getter 
+//	@Setter
+//	@OneToMany(cascade=CascadeType.ALL)
+//	@JoinColumn(name="trainee_task_id",referencedColumnName="trainee_task_id")
+//	private List<TaskAddHours> taskAddHours;
+//	
+//	@Getter 
+//	@Setter
+//	@OneToMany(cascade=CascadeType.ALL)
+//	@JoinColumn(name="trainee_task_id",referencedColumnName="trainee_task_id")
+//	private List<TraineeTaskIssue> traineeTaskIssues;
+	
+	
 	
 	
 }
